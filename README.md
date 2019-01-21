@@ -11,5 +11,5 @@ Network Protocol State Inference
 * Instructions for Use of `KU-S-S-IM`
   1. Open a terminal
   2. Install dependent libraries through `make install`
-  3. Install `g++`
+  3. Install `g++` to `$ sudo apt-get install g++`
   4. Build `main.cpp`
