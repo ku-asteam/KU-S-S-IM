@@ -14,4 +14,4 @@ Network Protocol State Inference
   2. Install dependent libraries through `make install`
   3. Install `$ sudo apt-get install g++`
   4. Build `main.cpp`
-  5. Run through the result of `KU-S-S-EM`
+  5. Run through the result of the `KU-S-S-EM`
