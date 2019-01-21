@@ -5,7 +5,7 @@ Network Protocol State Inference
 
 ## Requirements and Dependencies
 * OS : `Ubuntu 18.04.1 LTS`
-* Language : `g++`
+* Language : `c++`
 
 ## Instructions
 * Instructions for Use of `KU-S-S-IM`
