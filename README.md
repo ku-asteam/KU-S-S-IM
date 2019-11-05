@@ -17,3 +17,8 @@ The function of this software is to infer the state from the information of the 
   3. Install `$ sudo apt-get install g++`
   4. Build `main.cpp`
   5. Run through the result of the `KU-S-S-EM`
+  
++ (20191105)
+> Parsing SSL Layer through `ssl/main.cpp`
+  1. Build `main.py`
+  2. Run `main.exe`(bulid file)
