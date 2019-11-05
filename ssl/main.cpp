@@ -1,22 +1,3 @@
-/**
- * SSLAnalyzer application
- * ========================
- * This application analyzes SSL/TLS traffic and presents detailed and diverse information about it. It can operate in live traffic
- * mode where this information is collected on live packets or in file mode where packets are being read from a pcap/pcapng file. The
- * information collected by this application includes:
- * - general data: number of packets, packet rate, amount of traffic, bandwidth
- * - flow data: number of flow, flow rate, average packets per flow, average data per flow
- * - SSL/TLS data: number of client-hello and server-hello messages, number of flows ended with successful handshake,
- *   number of flows ended with SSL alert
- * - hostname map (which hostnames were used and how much. Taken from the server-name-indication extension in the
- *   client-hello message)
- * - cipher-suite map (which cipher-suites were used and how much)
- * - SSL/TLS versions map (which SSL/TLS versions were used and how much)
- * - SSL/TLS ports map (which SSL/TLS TCP ports were used and how much)
- *
- * For more details about modes of operation and parameters run SSLAnalyzer -h
- */
-
 #include <stdlib.h>
 #include <string.h>
 #include <algorithm>
@@ -78,37 +59,6 @@ struct SSLPacketArrivedData
 	PcapFileWriterDevice* pcapWriter;
 };
 
-
-/**
- * Print application usage
- */
-void printUsage()
-{
-	printf("\nUsage: PCAP file mode:\n"
-			"----------------------\n"
-			"%s [-hv] -f input_file\n"
-			"\nOptions:\n\n"
-			"    -f           : The input pcap/pcapng file to analyze. Required argument for this mode\n"
-			"    -v           : Displays the current version and exists\n"
-			"    -h           : Displays this help message and exits\n\n"
-			"Usage: Live traffic mode:\n"
-			"-------------------------\n"
-			"%s [-hvld] [-o output_file] [-r calc_period] -i interface\n"
-			"\nOptions:\n\n"
-			"    -i interface   : Use the specified interface. Can be interface name (e.g eth0) or interface IPv4 address\n"
-			"    -o output_file : Save all captured SSL packets to a pcap file. Notice this may cause performance degradation\n"
-			"    -r calc_period : The period in seconds to calculate rates. If not provided default is 2 seconds\n"
-			"    -d             : Disable periodic rates calculation\n"
-			"    -v             : Displays the current version and exists\n"
-			"    -h             : Displays this help message and exits\n"
-			"    -l             : Print the list of interfaces and exists\n", AppName::get().c_str(), AppName::get().c_str());
-	exit(0);
-}
-
-
-/**
- * Print application version
- */
 void printAppVersion()
 {
 	printf("%s %s\n", AppName::get().c_str(), getPcapPlusPlusVersionFull().c_str());
@@ -133,10 +83,6 @@ void listInterfaces()
 	exit(0);
 }
 
-
-/**
- * packet capture callback - called whenever a packet arrives
- */
 void sslPacketArrive(RawPacket* packet, PcapLiveDevice* dev, void* cookie)
 {
 	// parse the packet
@@ -171,11 +117,6 @@ bool uint16CountComparer(std::pair<uint16_t, int> first, std::pair<uint16_t, int
 {
 	return first.second > second.second;
 }
-
-
-/**
- * Print the server-name count map to a table sorted by popularity (most popular names will be first)
- */
 void printServerNames(ClientHelloStats& clientHelloStatsCollector)
 {
 	// create the table
