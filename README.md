@@ -11,6 +11,11 @@ The function of this software is to infer the state from the information of the 
 * Library : `KU-S-S-EM`
 
 ## Instructions
+* The Architecture of Protocol State Inference
+
+![architecture](https://user-images.githubusercontent.com/41291493/68915312-d226a380-07a4-11ea-975e-b82fc08c0540.png)
+
+
 * Instructions for Use of `KU-S-S-IM`
   1. Open a terminal
   2. Install dependent libraries through `make install`
