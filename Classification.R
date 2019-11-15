@@ -14,7 +14,7 @@ library(dbscan)
 
 ######################## Read json ###############################
 
-json_row_data <- fromJSON(file = "file:///C:/R/dataset/json/mini_data.json")
+json_row_data <- fromJSON(file = "file:///C:/R/dataset/json/data.json")
 json_row_data <- rbindlist(json_row_data)
 
 ######################## Read Excel ###############################
