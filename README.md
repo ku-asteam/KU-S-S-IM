@@ -12,8 +12,9 @@ The function of this software is to infer the state from the information of the 
 
 ## Instructions
 * The Architecture of Protocol State Inference
-
 ![architecture](https://user-images.githubusercontent.com/41291493/68915312-d226a380-07a4-11ea-975e-b82fc08c0540.png)
+
+![image](https://user-images.githubusercontent.com/41291493/68915379-2598f180-07a5-11ea-8ad3-d6a3291681b3.png)
 
 
 * Instructions for Use of `KU-S-S-IM`
