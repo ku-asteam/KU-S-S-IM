@@ -1,4 +1,4 @@
-# KU-S-S-IMv1
+# KU-S&S-IMv1
 Status and Spec Inference Module for Transport Layer Protocol
 
 ## Introduction
