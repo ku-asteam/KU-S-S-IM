@@ -22,8 +22,8 @@ The software features the ability to collect data based on the Floodlight SDN co
 ```shell script
 $ python dagmm_proto_inference.py
 ```
-  jupyter nbconvert --to script IMCOM.ipynb -> 2. Python IMCOM.py
-  
+
+
 `AVG_IVL`: Average interval of packet
 
 `AVG_PAY`: Average size of payload
