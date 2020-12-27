@@ -14,12 +14,11 @@ The function of this software is to infer the state from the information of the 
 
 ## Instructions
 * The Architecture of Protocol State Inference
-본 아키텍처는 KU-S-S-EM에서 역공학을 통해 프로토콜의 Specification을 획득한 이후에,
-해당 정보를 통해서 간단한 상태추론(전송중/전송완료)부터 심화연구까지를 연구하는데 활용됨
+After obtaining the protocol's specification through reverse engineering in KU-S-S-EM, this architecture is used to study simple state inference through advanced research.
 
 ![architecture](https://user-images.githubusercontent.com/41291493/68915312-d226a380-07a4-11ea-975e-b82fc08c0540.png)
 
-획득한 프로토콜 Specification을 바탕으로, 커널 바이패스 환경에서 `pseudo_code.cpp`의 방식으로 아래의 상태추론 메커니즘을 수행함
+Based on the obtained protocol specification, the following status inference mechanism is performed in a kernel bypass environment:
 
 ![image](https://user-images.githubusercontent.com/41291493/68915379-2598f180-07a5-11ea-8ad3-d6a3291681b3.png)
 
