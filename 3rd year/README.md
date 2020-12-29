@@ -1,4 +1,4 @@
-# KU-S&S-IM
+# KU-S&S-IMv3
 Improved Network Protocol State Inference (3rd Year)
 
 In this project, we propose a new approach to protocol inference through the improved KU-S-S-IM project.
